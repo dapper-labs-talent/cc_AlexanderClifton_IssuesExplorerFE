@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-
+import styles from "./App.module.css";
+import SearchBar from "./components/SearchBar/SearchBar.js";
 export default function App() {
   return (
-    <div className="App">
-      <h1>Github UI</h1>
+    <div className={styles.App}>
+      <h1 className={styles.appHeader}>Github Issue Viewer</h1>
+      <SearchBar />
     </div>
   );
 }
