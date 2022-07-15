@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import styles from "./App.module.css";
 import SearchBar from "./components/SearchBar/SearchBar.js";
+import Results from "./components/ResultsPage/ResultsPage.js";
+
+const DEFAULT_REPO = "https://github.com/monero-ecosystem/PiNode-XMR";
 export default function App() {
+  // const [userQuery, setUserQuery] = useState("");
+  const [userQuery, setUserQuery] = useState(DEFAULT_REPO);
   return (
     <div className={styles.App}>
-      <h1 className={styles.appHeader}>Github Issue Viewer</h1>
-      <SearchBar />
+      {!userQuery ? <SearchBar /> : <Results userQuery={userQuery} />}
     </div>
   );
 }

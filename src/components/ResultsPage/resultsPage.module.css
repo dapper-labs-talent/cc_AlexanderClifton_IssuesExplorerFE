@@ -1,0 +1,11 @@
+.resultsPage {
+  border: 1px solid red;
+  width: 90vw;
+  height: 90vw;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

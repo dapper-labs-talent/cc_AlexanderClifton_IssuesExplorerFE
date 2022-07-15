@@ -18,18 +18,22 @@ const SearchBar = () => {
     }
   };
   return (
-    <div className={styles.searchbar}>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <button className={styles.button} type="submit">
-          <SearchIcon className={styles.icon} />
-        </button>
-        <input
-          onChange={(event) => handleChange(event)}
-          className={styles.input}
-          value={inputValue}
-          onFocus={handleFocus}
-        />
-      </form>
+    <div className={styles.searchPage}>
+      <h1 className={styles.appHeader}>Github Issue Viewer</h1>
+
+      <div className={styles.searchbar}>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <button className={styles.button} type="submit">
+            <SearchIcon className={styles.icon} />
+          </button>
+          <input
+            onChange={(event) => handleChange(event)}
+            className={styles.input}
+            value={inputValue}
+            onFocus={handleFocus}
+          />
+        </form>
+      </div>
     </div>
   );
 };
