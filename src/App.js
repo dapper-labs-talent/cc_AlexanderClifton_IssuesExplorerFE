@@ -5,11 +5,10 @@ import Results from "./components/ResultsPage/ResultsPage.js";
 
 const DEFAULT_REPO = "https://github.com/monero-ecosystem/PiNode-XMR";
 export default function App() {
-  // const [userQuery, setUserQuery] = useState("");
-  const [userQuery, setUserQuery] = useState(DEFAULT_REPO);
+  const [repo, setRepo] = useState(DEFAULT_REPO);
   return (
     <div className={styles.App}>
-      {!userQuery ? <SearchBar /> : <Results userQuery={userQuery} />}
+      {!repo ? <SearchBar setRepo={setRepo} /> : <Results repo={repo} />}
     </div>
   );
 }

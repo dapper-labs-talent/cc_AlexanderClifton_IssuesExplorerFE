@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styles from "./searchbar.module.css";
 import { ReactComponent as SearchIcon } from "../../_assets/icons/search.svg";
-const SearchBar = () => {
+const SearchBar = ({ setRepo }) => {
   const [inputValue, setInputValue] = useState("foo");
 
   const handleSubmit = () => {
+    setRepo(inputValue);
     setInputValue("");
   };
   const handleChange = (e) => {

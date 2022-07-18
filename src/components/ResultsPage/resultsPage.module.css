@@ -1,11 +1,32 @@
 .resultsPage {
-  border: 1px solid red;
-  width: 90vw;
+  width: 100vw;
   height: 90vw;
+  margin: 0;
+  padding: 0;
 }
 
 .headerSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid black;
+  width: 100%;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.closeIcon {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.filterWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.repo {
+  padding-right: 20px;
 }
