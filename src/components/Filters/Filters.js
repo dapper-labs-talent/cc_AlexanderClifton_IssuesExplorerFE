@@ -13,8 +13,3 @@ const Filters = () => {
 };
 
 export default Filters;
-/*
-I got really sick last Friday so this is the first time I've touched this challenge since thursday.
-
-
- */

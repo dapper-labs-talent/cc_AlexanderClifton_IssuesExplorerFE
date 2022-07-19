@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./resultsPage.module.css";
 import Filters from "../Filters/Filters.js";
+import IssuesList from "../IssuesList/IssuesList.js";
 import { ReactComponent as Close } from "../../_assets/icons/close.svg";
 const ResultsPage = ({ repo }) => {
   return (
@@ -15,6 +16,7 @@ const ResultsPage = ({ repo }) => {
         <Filters />
         <Close className={styles.closeIcon} />
       </div>
+      <IssuesList />
     </div>
   );
 };
