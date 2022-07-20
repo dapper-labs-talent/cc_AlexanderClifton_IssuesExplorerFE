@@ -3,7 +3,7 @@ import styles from "./resultsPage.module.css";
 import Filters from "../Filters/Filters.js";
 import IssuesList from "../IssuesList/IssuesList.js";
 import { ReactComponent as Close } from "../../_assets/icons/close.svg";
-const ResultsPage = ({ repo }) => {
+const ResultsPage = ({ repo, setRepo }) => {
   return (
     <div className={styles.resultsPage}>
       <div className={styles.headerSection}>
@@ -14,7 +14,7 @@ const ResultsPage = ({ repo }) => {
       </div>
       <div className={styles.filterWrapper}>
         <Filters />
-        <Close className={styles.closeIcon} />
+        <Close className={styles.closeIcon} onClick={() => setRepo("")} />
       </div>
       <IssuesList />
     </div>
