@@ -4,9 +4,18 @@ import { ReactComponent as SearchIcon } from "../../_assets/icons/search.svg";
 const SearchBar = ({ setRepo }) => {
   const [inputValue, setInputValue] = useState("foo");
 
-  const handleSubmit = () => {
-    setRepo(inputValue);
-    setInputValue("");
+  const handleSubmit = (e) => {
+    // setRepo(inputValue);
+    // setInputValue("");
+    e.preventDefault();
+    fetch("https://api.github.com/repos/monero-ecosystem/PiNode-XMR")
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("!!! here is the response", res);
+      })
+      .catch((e) => {
+        console.log("!!! ERRORZ", e);
+      });
   };
   const handleChange = (e) => {
     e.preventDefault();
@@ -23,7 +32,7 @@ const SearchBar = ({ setRepo }) => {
       <h1 className={styles.appHeader}>Github Issue Viewer</h1>
 
       <div className={styles.searchbar}>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
           <button className={styles.button} type="submit">
             <SearchIcon className={styles.icon} />
           </button>
