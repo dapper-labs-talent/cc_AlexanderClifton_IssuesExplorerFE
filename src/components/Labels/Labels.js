@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./labels.module.css";
 
 const Labels = ({ issueLabels }) => {
   return (
     <div>
       {issueLabels.map((label) => {
-        return <span>{label}</span>;
+        return <span className={styles.labels}>{label}</span>;
       })}
     </div>
   );

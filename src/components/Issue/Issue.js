@@ -7,7 +7,7 @@ const Issue = ({ issueData }) => {
   return (
     <div className={styles.issue}>
       <h1>{title}</h1>
-      <span>{description}</span>
+      <span className={styles.description}>{description}</span>
       <Labels issueLabels={labels} />
     </div>
   );
