@@ -5,10 +5,10 @@ const SearchBar = ({ setRepo }) => {
   const [inputValue, setInputValue] = useState("foo");
 
   const handleSubmit = (e) => {
-    // setRepo(inputValue);
-    // setInputValue("");
     e.preventDefault();
-    fetch("https://api.github.com/repos/monero-ecosystem/PiNode-XMR")
+    setRepo(inputValue);
+    setInputValue("");
+    fetch(`https://api.github.com/repos/${inputValue.slice(19)}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("!!! here is the response", res);
